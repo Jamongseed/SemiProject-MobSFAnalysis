@@ -1,6 +1,7 @@
 SemiProject-MobSFAnalysis//
 
 앱 복호화 및 재서명 + 감지 로직 우회 어플 컴파일//
+사용법 : python .\smali-decrypted\code.py
 
 MobSF 활용 정적분석//
 
