@@ -1,0 +1,5 @@
+*.apk
+sample*
+pgs*
+*.dex
+*.keystore
