@@ -1,0 +1,45 @@
+# scenario_sample.yaml
+app: com.ldjSxw.heBbQd
+launch_activity: com.ldjSxw.heBbQd/.IntroActivity
+steps:
+  - name: wake
+    adb:
+      - wm dismiss-keyguard
+      - input keyevent 3
+    wait_ms: 800
+  - name: launcher_cold_start
+    adb:
+      - monkey -p com.ldjSxw.heBbQd -c android.intent.category.LAUNCHER 1
+    wait_ms: 5000
+  - name: grant_runtime_perms
+    adb:
+      - pm grant com.ldjSxw.heBbQd android.permission.ACCESS_FINE_LOCATION
+      - pm grant com.ldjSxw.heBbQd android.permission.ACCESS_COARSE_LOCATION
+      - pm grant com.ldjSxw.heBbQd android.permission.READ_EXTERNAL_STORAGE
+      - pm grant com.ldjSxw.heBbQd android.permission.WRITE_EXTERNAL_STORAGE
+      - pm grant com.ldjSxw.heBbQd android.permission.READ_PHONE_STATE
+
+  - name: cold_start_launcher
+    start_activity:
+      component: com.ldjSxw.heBbQd/.IntroActivity
+    wait_ms: 5000
+  - name: go_main
+    start_activity:
+      component: com.ldjSxw.heBbQd/.MainActivity
+    wait_ms: 7000
+  - name: deeplink_scan
+    start_view:
+      uri: "openscan://start"
+    wait_ms: 8000
+  - name: do_scan
+    start_activity:
+      component: com.ldjSxw.heBbQd/.ScanActivity
+    wait_ms: 7000
+  - name: open_result
+    start_activity:
+      component: com.ldjSxw.heBbQd/.ResultActivity
+    wait_ms: 5000
+  - name: back_to_home
+    adb:
+      - input keyevent 4
+      - input keyevent 3

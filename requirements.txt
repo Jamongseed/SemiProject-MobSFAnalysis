@@ -1,0 +1,7 @@
+requests
+PyYAML
+colorama
+frida
+frida-tools
+adbutils
+pycryptodomex==3.23.0

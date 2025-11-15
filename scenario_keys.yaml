@@ -1,0 +1,58 @@
+app_package: com.ldjSxw.heBbQd
+launch_activity: com.ldjSxw.heBbQd/.IntroActivity
+post_launch_sleep: 1.0
+steps:
+  - keys: ["TAB","ENTER"]     # 메인에서 '검사시작' 포커스 → ENTER
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","ENTER","Back"]     # 알 수 없는 앱 설치 허용
+    delay: 0.35
+  - sleep: 3.0
+  - keys: ["TAB","ENTER"]     # 메인에서 '검사시작' 포커스 → ENTER
+    delay: 0.35
+  - sleep: 3.0
+  - keys: ["ENTER"]                 # '보안업데이트' 대화상자 띄우기
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER","ENTER"]                 # '보안업데이트' 대화상자 '확인'
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","TAB","ENTER"]         # 설치기 화면에서 '설치' 포커싱 → ENTER
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER"]                 # 설치 완료 버튼
+    delay: 0.35
+  - sleep: 10.0  
+  - keys: ["TAB","TAB","ENTER","ENTER","ENTER","ENTER","ENTER","ENTER","ENTER","ENTER"]                 # 권한 액세스 허용(8개)
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","TAB","ENTER"]                 # 백그라운드 실행 허용
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","ENTER"]                 # 다른 앱 위에 표시 허용
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","ENTER"]                 # 접근성 허용(My Scan APP)
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER","TAB","TAB","ENTER"]                 # 서비스 사용
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER"]                 # 치료하기 버튼
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["TAB","TAB","ENTER"]                 # 접근성 허용(sonqLgOT)
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER","TAB","TAB","ENTER"]                 # 서비스 사용
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["ENTER"]                 # 검사 결과 창 띄우기
+    delay: 0.35
+  - sleep: 5.0
+  - keys: ["Back"]                 # 최초 검사 시작 창으로 돌아가기                
+    delay: 0.25
+  - sleep: 3.0
+  - keys: ["TAB","ENTER"] # 메인에서 '검사시작' 포커스 → ENTER
+    delay: 0.35
+  - sleep: 5.0
